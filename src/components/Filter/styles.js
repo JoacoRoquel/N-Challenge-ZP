@@ -37,6 +37,10 @@ export const AddressContainer = styled.div`
     display:flex;
 
     .search-button{
-        margin-left: .8rem;
+      margin-left:.8rem;
+
+    }
+    .search-button svg{
+        cursor:pointer;
     }
 `

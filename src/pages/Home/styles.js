@@ -11,7 +11,6 @@ export const Main = styled.div`
   margin:0 auto;
   display:block;
 `
-
 export const FirstColumn = styled.div`
   width: 302px;
   flex-shrink: 0;
@@ -22,4 +21,11 @@ export const FirstColumn = styled.div`
     display:flex;
     flex-direction:column;
   }
+`
+export const SecondColumn = styled.div`
+  width: calc(100% - 290px);
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
 `

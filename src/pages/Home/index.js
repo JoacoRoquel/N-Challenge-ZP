@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react'
 import { Filter } from '../../components/Filter'
 import { Loading } from '../../components/Loading'
 import { GetData } from '../../hooks/ManageData'
-import { PageContainer, Main, FirstColumn } from './styles'
+import { ListOfPosting } from '../../containers/ListOfPosting'
+import { PageContainer, Main, FirstColumn, SecondColumn } from './styles'
 
 export const Home = () => {
   const { data, loading } = GetData()
@@ -37,7 +38,10 @@ export const Home = () => {
             operationType={operationType}
           />
         </FirstColumn>
-        {loading ? <Loading /> : <h1>Propiedades</h1>}
+        {loading ? <Loading /> :
+          <SecondColumn>
+            <ListOfPosting postings={filteredPosting} />
+          </SecondColumn>}
       </PageContainer>
     </Main>
   )
