@@ -23,6 +23,7 @@ export const Filter = ({ onChangeAddress, onChangeOperation, operationType }) =>
           <AddressContainer>
             <input type='text'
               ref={ref}
+              onKeyDown={key => key.keyCode === 13 && onChangeAddress(ref.current.value)}
               placeholder='Buscar por dirección' />
             <button
               className='search-button'
