@@ -1,0 +1,36 @@
+{
+  "name": "n-challenge-zp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "PORT=8000 react-scripts start",
+    "start-win": "set PORT=8000 && react-scripts start",
+    "build": "PORT=8000 react-scripts build",
+    "build-win": "set PORT=8000 && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
