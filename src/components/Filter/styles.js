@@ -38,9 +38,12 @@ export const AddressContainer = styled.div`
 
     .search-button{
       margin-left:.8rem;
+      border-radius:5px;
+      border: 1px solid #dedede;
+      max-height: 29px;
+      min-width: 30px;
+      margin-top: 11px;
+      cursor:pointer;
 
-    }
-    .search-button svg{
-        cursor:pointer;
     }
 `
