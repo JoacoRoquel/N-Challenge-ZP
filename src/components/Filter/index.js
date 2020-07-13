@@ -1,14 +1,14 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, memo } from 'react'
 import { RadioButton } from '../RadioButton'
 import { TitleFilter } from '../TitleFilter'
 import { FilterContainer, AddressContainer } from './styles'
 import { FaSearchLocation } from 'react-icons/fa'
 
-export const Filter = ({ onChangeAddress, onChangeOperation, operationType }) => {
+const FilterComponent = ({ onChangeAddress, onChangeOperation, operationType }) => {
   const [showOperation, setShowOperation] = useState(true)
   const [showAddress, setShowAddress] = useState(true)
   const ref = useRef(null)
-
+  
   return (
     <FilterContainer>
       <h3>Filtrado Actual</h3>
@@ -53,5 +53,6 @@ export const Filter = ({ onChangeAddress, onChangeOperation, operationType }) =>
       </div>
     </FilterContainer >
   )
-
 }
+
+export const Filter = React.memo(FilterComponent) 
