@@ -1,4 +1,4 @@
-import React, { useState, useRef, memo } from 'react'
+import React, { useState, useRef } from 'react'
 import { RadioButton } from '../RadioButton'
 import { TitleFilter } from '../TitleFilter'
 import { FilterContainer, AddressContainer } from './styles'
@@ -8,7 +8,7 @@ const FilterComponent = ({ onChangeAddress, onChangeOperation, operationType }) 
   const [showOperation, setShowOperation] = useState(true)
   const [showAddress, setShowAddress] = useState(true)
   const ref = useRef(null)
-  
+
   return (
     <FilterContainer>
       <h3>Filtrado Actual</h3>
