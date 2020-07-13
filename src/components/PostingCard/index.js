@@ -5,6 +5,7 @@ import { LikeButton } from '../LikeButton'
 import { Link } from 'react-router-dom'
 import { StyledPostingCard, CardContainer, FirstColumn, SecondColumn } from './styles'
 import { MdRestore } from 'react-icons/md'
+import { PropTypes } from 'prop-types'
 
 export const PostingCard = props => {
   const {
@@ -74,5 +75,35 @@ export const PostingCard = props => {
       </CardContainer>
     </StyledPostingCard>
   )
+}
+PostingCard.propTypes = {
+  posting_id: PropTypes.string,
+  title: PropTypes.string,
+  posting_location: PropTypes.shape(
+    {
+      address: PropTypes.string,
+      zone: PropTypes.string,
+      city: PropTypes.string
+    }),
 
+  posting_prices: PropTypes.arrayOf(PropTypes.shape({
+    operation_type: PropTypes.number,
+    price: PropTypes.shape({
+      amount: PropTypes.number,
+      currency: PropTypes.string
+    }),
+    expenses: PropTypes.shape({
+      amount: PropTypes.number,
+      currency: PropTypes.string
+    })
+  })),
+  posting_picture: PropTypes.string,
+  posting_slug: PropTypes.string,
+  posting_description: PropTypes.string,
+  publication_plan: PropTypes.string,
+  publish_date: PropTypes.string,
+  posting_status: PropTypes.shape({
+    status: PropTypes.string,
+    label: PropTypes.string
+  })
 }
